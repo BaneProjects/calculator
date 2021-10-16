@@ -13,15 +13,14 @@ function reset() {
   op = "";
   id = 0;
   console.log(variable);
-  updateScreen(variable[id]);
+  updateScreen();
 }
 function updateScreen() {
   if (variable[id] === "") {
-    console.log(variable);
     screen.innerHTML = "0";
   } else {
-    screen.innerHTML = parseInt(variable[id]).toLocaleString("en-US");
-    console.log(variable);
+    let num = Number(variable[id]).toLocaleString("en-US");
+    screen.innerHTML = num;
   }
 }
 function del() {
